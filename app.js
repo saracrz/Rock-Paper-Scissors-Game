@@ -25,15 +25,40 @@ match.classList.add('fadeIn');
      option.addEventListener('click', function(){
       
        const computerNumber = Math.floor(Math.random() * 3);
-       const computerChoise = computerOptions[computerNumber];
-       console.log(computerChoise);
+       const computerChoice = computerOptions[computerNumber];
+       
      });
-  }); 
-   
-   
+  });   
  };
 
+const compareHands = (playerChoice, computerChoice) =>{
+     //Update Text
+     const winner = document.querySelector('.winner');
+     //Chacking for a tie
+     if(playerChoice === computerChoice){
+        return winner.textContent = 'It is a tie!';
+     }
+     //Check for Rock
+     if(playerChoice === 'rock' && computerChoice === 'scissors'){
+       return winner.textContent = 'You Win!'
+     }else {
+       return winner.textContent = 'Computer Wins'
+     }
 
+     //Check for Paper
+     if (playerChoice === "paper" && computerChoice === "scissors") {
+         return (winner.textContent = "Computer Wins");
+     } else {
+         return (winner.textContent = "You Win!");
+     } 
+     //Check for Scissor
+     if (playerChoice === "scissors" && computerChoice === "rock") {
+         return (winner.textContent = "Computer Wins");
+     } else {
+         return (winner.textContent = "You Win!");
+     } 
+
+}
 
 startGame();
 playMatch();
