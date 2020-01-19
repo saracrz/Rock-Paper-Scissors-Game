@@ -2,11 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
+}
+body{
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:   linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ),url(./assets/backg.png);
+  background-color: rgb(49, 50, 53);
 }
 section{
   height: 100vh;
-  background-color: rgb(28, 35, 228);
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .score{
   color: white;
@@ -25,29 +36,36 @@ font-size: 1.8em;
 }
 .intro{
   color: whitesmoke;
-  height: 20vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   text-align: center;
   transition: opacity 0.1s ease;
+
 }
 .intro h1{
-  font-size: 50px;
+  font-size: 3em;
+  line-height: 2;
+  justify-content: center;
 }
 .intro button, 
 .match button{
-  width: 150px;
-  height: 50px;
-  color: white;
+  width: 120px;
+  min-height: 50px;
+  color: rgb(250, 250, 250);
   font-size: 20px;
-  background: #fe3ca0;  
+  background: #050822;  
   border-radius: 3px;
+  border-color: rgb(242, 32, 211);
   
 }
 div.h2{
     text-align: center;
+}
+.score{
+ transition: opacity 0.1s ease 0.2s;
 }
 .match{
   position: absolute;
@@ -65,7 +83,7 @@ div.h2{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 20vh;
+  height: 30vh;
 
 }
 img{

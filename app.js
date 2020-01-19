@@ -6,10 +6,13 @@ const startGame = ()=>{
   const playBtn = document.querySelector(".intro button");
   const introScreen = document.querySelector('.intro');
   const match = document.querySelector('.match');
+  const score = document.querySelector('.score');
+
 
   playBtn.addEventListener('click', () =>{
     introScreen.classList.add('fadeOut');
     match.classList.add('fadeIn');
+    score.classList.add('fadeIn');
 });
 };
  
@@ -28,7 +31,6 @@ const startGame = ()=>{
 
    //Computer Options
    const computerOptions = ['rock', 'paper', 'scissors'];
-
    options.forEach(option =>{
      option.addEventListener('click', function(){
     //Computer Choice 
