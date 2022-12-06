@@ -16,7 +16,7 @@ const startGame = ()=>{
 });
 };
  
-//Play Match
+// This i a change to test git
  const playMatch = () => {
    const options = document.querySelectorAll(".options button");
    const playerHand = document.querySelector(".player-hand");
